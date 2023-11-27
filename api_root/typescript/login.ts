@@ -5,7 +5,7 @@ onload = () => {
       const password: string = (document.getElementById('user_password') as HTMLInputElement).value;
       const msg = (document.getElementById('msg') as HTMLDivElement);
 
-      fetch(backendAddress + 'api_rest/all_users/', {
+      fetch(backendAddress + 'api/user/all', {
           method: 'POST',
           body: JSON.stringify({
               'user_nickname': username,

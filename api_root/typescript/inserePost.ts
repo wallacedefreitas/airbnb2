@@ -12,7 +12,7 @@ onload = () =>{
   const headers: Record<string, string> ={ 'Content-Type': 'application/json', };
   if (token !== null){ headers['Authorization'] = 'Token ' + token; }   
 
-  fetch(backendAddress + "api_rest/comments/manager/",{
+  fetch(backendAddress + "api/comments/manager/",{
       method: 'POST', body: JSON.stringify(data),
       headers: headers
   }).then(response =>{

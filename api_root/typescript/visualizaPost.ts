@@ -9,7 +9,7 @@ onload = () => {
   console.log("a")
   if(id){
     abnbNome.innerHTML = id;
-      fetch(backendAddress + 'api_rest/comments/manager/' + id + '/')
+      fetch(backendAddress + 'api/comments/manager/' + id + '/')
       .then(response => response.json())
       .then(post =>{
         userNome.innerHTML = post['user_nickname']

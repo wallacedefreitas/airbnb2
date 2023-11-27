@@ -4,7 +4,7 @@ onload = () => {
         const password: string = (document.getElementById('user_password ') as HTMLInputElement).value;
         const email: string = (document.getElementById('user_email ') as HTMLInputElement).value;
 
-        fetch(backendAddress + 'api_rest/user_manager/', {
+        fetch(backendAddress + 'api/user/manager/', {
             method: 'POST',
             body: JSON.stringify({
                 'user_nickname ': username,

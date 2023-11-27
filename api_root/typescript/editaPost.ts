@@ -5,7 +5,7 @@ onload = () => {
   if(id) {
     console.log('id = ', id);
     idPlace.innerHTML = id;
-    fetch(backendAddress + 'airbnb2/post/public/' + id + '/')
+    fetch(backendAddress + 'api/comments/manager/' + id + '/')
     .then(response => response.json())
     .then(post => {
       let campos = ['airbnb_name', 'user_comment']
@@ -30,7 +30,7 @@ onload = () => {
   }
 
   const token = localStorage.getItem('token');
-  fetch(backendAddress + "api_rest/comments/manager/" + id + '/', {
+  fetch(backendAddress + "api/comments/manager/" + id + '/', {
     method: 'PUT',
     body: JSON.stringify(data),
     headers: {

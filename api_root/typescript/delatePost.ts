@@ -6,7 +6,7 @@ onload = () => {
   if (id) {
     console.log('id = ', id);
     console.log('idPlace =' , idPlace);
-    fetch(backendAddress + 'api_rest/comments/manager/' + id + '/')
+    fetch(backendAddress + 'api/comments/manager/' + id + '/')
       .then(response => response.json())
       .then(post => {
         const mensagem = 'Deseja apagar o post "${post.airbnb_name}"?';
@@ -18,7 +18,7 @@ onload = () => {
         botaoConfirmar.addEventListener('click', () => {
           console.log('Botão de confirmação clicado');
           const token = localStorage.getItem('token');
-          fetch(backendAddress + 'airbnb/post/' + id + '/', {
+          fetch(backendAddress + 'api/comments/manager/' + id + '/', {
             method: 'DELETE',
             headers: {
               'Authorization': 'Token ' + token,
