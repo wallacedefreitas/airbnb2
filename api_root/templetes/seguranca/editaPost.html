@@ -1,0 +1,21 @@
+{% extends 'seguranca/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <script src="javascript/editaPost.ts"></script>
+</head>
+<body>
+  <h2> Edita a Post <span id='id'></span></h2>
+  <form id="meuFormulario">
+    <input type="hidden" name="id" id="id">
+    <table>
+      <tbody>
+        <tr><td> titulo: </td><td><input type="text" name="airbnb_name" id="airbnb_name"></td></tr>
+        <tr><td> texto: </td><td><input type="text" name="user_comment" id="user_comment"></td></tr>
+      </tbody>
+    </table>
+    <button id="edita" name="edita" value="Edita"> Atualiza </button>
+  </form>
+  <div id="mensagem"></div>
+</body>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'seguranca/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <script src="javascript/visualizaPost.ts"></script>
+</head>
+<body>
+  <div>
+    <h2>Propriedades</h2><span id='airbnb_name'></span>
+    {% if user.is_authenticated %}
+    <form action="{% url 'novoPost' %}">
+      <input type="submit" value="Criar novo Post" style="margin-left: 200px;"/>
+    </form>
+    {% endif %}
+    <h6><span id='user_nickname'></span></h6>
+    <h6><span id='user_note'></span></h6>
+    <h6><span id='user_comment'></span></h6>
+  </div>
+  <form action="" method="get">
+    <table border="1">
+      <thead>
+        <tr>
+          <td> Usuário </td><td> Nota </td><td> Comentario </td> <td> </td>
+        </tr>
+      </thead>
+      <tbody id="idtbody"></tbody>
+    </table>
+    
+  </form>
+</body>
+{% endblock %}

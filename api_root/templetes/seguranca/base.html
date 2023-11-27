@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}AirBnB2{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+  <script src="javascript/constantes.ts"></script>
+</head>
+<body>
+  <h1>AirBnB2</h1>
+  <div>
+    <a href="/">Homepage</a>
+     <a href="{% url 'home' %}"></a>
+    {% if user.is_authenticated %}
+    | <a href="{% url 'logout' %}"> Deslogar </a>
+    | <a href="{% url 'novoPost' %}"> Criar post </a>
+    | Você é {{ user.username }}  
+    </a>
+    {% else %}
+    | <a href="{% url 'cadastro' %}"> Cadastrar </a>
+    | <a href="{% url 'login' %}?next={% url 'pgSecreta' %}"> Logar </a>
+    {% endif %}
+    | Olá {% firstof user.username "visitante" %}
+  </div>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>
