@@ -6,8 +6,9 @@
 </head>
 <body>
   <h3> Cadastro </h3>
-  <form>
-    <table>
+  <form action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+    <table class="formulaio">
       <tbody>
         <tr>
           <td> E-mail: </td>
@@ -15,11 +16,11 @@
         </tr>
         <tr>
           <td> Nome: </td>
-          <td><input type="text" name="username" id="user_nickname "></td>
+          <td><input type="text" name="user_nickname" id="user_nickname "></td>
         </tr>
         <tr>
           <td> Senha: </td>
-          <td><input type="password" name="password" id="user_password "></td>
+          <td><input type="password" name="user_password" id="user_password "></td>
         </tr>
         <tr>
           <td><br><button id="btnSignUp"> Cadastrar </button></td>

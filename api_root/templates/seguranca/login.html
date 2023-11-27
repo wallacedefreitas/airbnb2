@@ -7,15 +7,16 @@
 <body>
   <h2>Página de Login</h2>
   <form method="post">
-    <table>
+    {% csrf_token %}
+    <table class="formulario">
       <tbody>
         <tr>
           <td> Nome: </td>
-          <td><input type="text" name="username" id="username"></td>
+          <td><input type="text" name="user_nickname" id="user_nickname"></td>
         </tr>
         <tr>
           <td> Senha: </td>
-          <td><input type="password" name="password" id="password"></td>
+          <td><input type="password" name="user_password" id="user_password"></td>
         </tr>
         <tr>
           <td><button id="btnLogin">Login</button></td>
