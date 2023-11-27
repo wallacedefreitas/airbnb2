@@ -1,0 +1,40 @@
+{% extends 'seguranca/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <script src="typescript/inserePub.ts"></script>
+</head>
+<body>
+  <h3> Novo Post </h3>
+  <form id="meuPost">
+    <table>
+      <tbody>
+        <tr>
+          <td> Nome ABnB: </td>
+          <td><input type="text" name="abnbNome" id="airbnb_name"></input></td>
+        </tr>
+        <tr>
+          <td> Nota ABnB: </td>
+          <td>
+            <select name="nota" id="user_note">
+              <option value="0"> 0 </option>
+              <option value="1"> 1 </option>
+              <option value="2"> 2 </option>
+              <option value="3"> 3 </option>
+              <option value="4"> 4 </option>
+              <option value="5"> 5 </option>
+            </select>
+          </td>
+        </tr><br>
+        <tr>
+          <td> Comentario: </td>
+          <td><textarea id="user_comment" name="comentario" rows="8" cols="55"></textarea></td>
+        </tr>
+      </tbody>
+    </table>
+  <td></td>
+  <br><button id="insere" name="insere" value="Insere"> Postar </button>
+  </form>
+  <div id="mensagem"></div>
+</body>
+{% endblock %}

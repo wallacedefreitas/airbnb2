@@ -10,8 +10,7 @@ app_name = 'api_root'
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('api/', include('api_rest.urls'), name='api_rest_urls'),
-    path("admin/", admin.site.urls),
-    path("", views.PostsListView.as_view(), name = "home"),
+    path("", views.home, name = "home"),
     path('logout/', LogoutView.as_view(next_page=reverse_lazy('home'),), name='logout'),
     path('seguranca/cadastro/', views.cadastro, name='cadastro'),
     path('seguranca/login/', LoginView.as_view(template_name='seguranca/login.html',), name='login'),

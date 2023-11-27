@@ -1,0 +1,26 @@
+{% extends 'seguranca/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <script src="typescript/login.ts"></script>
+</head>
+<body>
+  <h2>Página de Login</h2>
+  <form method="post">
+    <table>
+      <tbody>
+        <tr>
+          <td> Nome: </td>
+          <td><input type="text" name="username" id="username"></td>
+        </tr>
+        <tr>
+          <td> Senha: </td>
+          <td><input type="password" name="password" id="password"></td>
+        </tr>
+        <tr>
+          <td><button id="btnLogin">Login</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+{% endblock %}

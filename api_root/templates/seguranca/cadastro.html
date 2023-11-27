@@ -1,0 +1,31 @@
+{% extends 'seguranca/base.html' %}
+{% load static %}
+{% block content %}
+<head>
+  <script src="typescript/cadastro.ts"></script>
+</head>
+<body>
+  <h3> Cadastro </h3>
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td> E-mail: </td>
+          <td><input type="email" name="email" id="user_email "></td>
+        </tr>
+        <tr>
+          <td> Nome: </td>
+          <td><input type="text" name="username" id="user_nickname "></td>
+        </tr>
+        <tr>
+          <td> Senha: </td>
+          <td><input type="password" name="password" id="user_password "></td>
+        </tr>
+        <tr>
+          <td><br><button id="btnSignUp"> Cadastrar </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+{% endblock %}

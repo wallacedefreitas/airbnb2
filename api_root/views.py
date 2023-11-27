@@ -5,7 +5,7 @@ from django.urls.base import reverse_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required, user_passes_test
 from api_rest.models import *
-#from api_root.forms import *
+#from api_root.view import *
 from api_rest.views import get_all_comments
 
 def home(request):
@@ -32,9 +32,9 @@ def cadastro(request):
 def novoPost(request):
   return render(request, 'seguranca/inserePost.html')
 
-class PostsListView(View):
-    post = get_all_comments('GET')
-   # def get(self, request, *args, **kwargs):
-    #    posts = UserComments.objects.all()
-     #   contexto = { 'airbnb_name': posts, 'user_nickname':request.user}
-      #  return render(request, 'home.html', contexto)
+#class PostsListView(View):
+    #post = get_all_comments('GET')
+    #def get(self, request, *args, **kwargs):
+      #  post = get_all_comments(request)
+       # contexto = { 'airbnb_name': post, 'user_nickname':request.user}
+       #return render(request, 'home.html', contexto)
